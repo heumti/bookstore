@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
-    />
-    
-    <title>Document</title>
-     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
+    <title>Redibooks</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
     <div id="wrap">
         <header>
@@ -23,14 +22,14 @@
 
                     </div>
                     <div class="searchbox">
-                    
+
                         <input type="search" id="search">
                         <div id="login">
                             <span>로그인</span>
                             <span>/회원가입</span>
 
                         </div>
-                    
+
 
                     </div>
 
@@ -41,7 +40,7 @@
                 <div id="header_bottom">
                     <div class="bottomleft">
                         <nav id="top_nav">
-                            <ul >
+                            <ul>
                                 <li><a href="">추천</a>
                                 </li>
                                 <li><a href="">만화</a>
@@ -74,7 +73,7 @@
             <div class="container">
                 <nav>
                     <ul class="nav_list">
-                        <li>
+                        <li class="active">
                             <a href="">
                                 추천
                             </a>
@@ -107,31 +106,31 @@
                         </li>
                     </ul>
                 </nav>
-                <section class="hero_slider" id="section1" >
-                     <div class="swiper mySwiper">
-                       <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="book 1"><a href=""></a></div>
-                            <div class="book1"><a href=""></a></div>
-                            <div class="book1"><a href=""></a></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div><a href=""></a></div>
-                            <div><a href=""></a></div>
-                            <div><a href=""></a></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div><a href=""></a></div>
-                            <div><a href=""></a></div>
-                            <div><a href=""></a></div>
-                        </div>
-                       
-        
+                <section class="hero_slider" id="section1">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ">
+                                <div class="book1"><a href=""></a></div>
+                                <div class="book1"><a href=""></a></div>
+                                <div class="book1"><a href=""></a></div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="book1"><a href=""></a></div>
+                                <div class="book1"><a href=""></a></div>
+                                <div class="book1"><a href=""></a></div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="book1"><a href=""></a></div>
+                                <div class="book1"><a href=""></a></div>
+                                <div class="book1"><a href=""></a></div>
+                            </div>
+
+
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
-                    
+
                 </section>
                 <div class="main_icons">
                     <icon>리디샵</icon>
@@ -143,103 +142,165 @@
                     <icon>대여</icon>
                     <icon>혜택모아봄</icon>
                 </div>
-
-                <section class="container_slider"id="slider2">
+                <section class="container_slider" id="section2">
                     <div class="swiper mySwiper2">
-                    <div class="swiper-wrapper2">
-                    <div class="swiper-slide2">
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>
-                        <div>7</div>
-                        <div>8</div>
-                        <div>9</div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide book-card book2">
+                                Slide 1</div>
+                            <div class="swiper-slide book-card book2">Slide 2</div>
+                            <div class="swiper-slide book-card book2">Slide 3</div>
+                            <div class="swiper-slide book-card book2">Slide 4</div>
+                            <div class="swiper-slide book-card book2">Slide 5</div>
+                            <div class="swiper-slide book-card book2">Slide 6</div>
+                            <div class="swiper-slide book-card book2">Slide 7</div>
+                            <div class="swiper-slide book-card book2">Slide 8</div>
+
+                        </div>
+                        <div class="swiper-pagination2"></div>
                     </div>
-                    
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-       
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
+
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="container">
                 </section>
-                ,
+                <section id="section3">
+                    <div class="section-header">
+                        <h2>베스트</h2>
+                        <a href="#">더보기 &gt;</a>
+                    </div>
+
+                    <div class="swiper mySwiper3">
+                        <!-- JS가 이곳에 기둥(swiper-slide)들을 채워 넣습니다 -->
+                        <div class="swiper-wrapper" id="best-wrapper">
+                            <!-- 로딩 메시지 -->
+                            <p style="padding: 20px;">순위 데이터를 불러오는 중입니다...</p>
+                        </div>
+                        <!-- 좌우 화살표 -->
+                        <div class="swiper-button-next next3"></div>
+                        <div class="swiper-button-prev prev3"></div>
+                    </div>
+                </section>
+            </div>
+            <div class="container">
+                <section id="section4">
+                    <div class="seticon-header">
+                        <h2>이벤트</h2>
+                        <a href=""> 더보기</a>
+                    </div>
+
+                    <div class="swiper mySwiper4" id="event=wrapper">
+
+
+                    </div>
+                    <div class="swiper-button-next4"></div>
+                    <div class="swiper-button-prev4"></div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div id="footer_top">
+                <div class="left">
+                    <ul>
+                        <li>
+                            <a href="">고객센터</a>
+                        </li>
+                        <li>
+                            <a href="">공지사항</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>제휴카드</li>
+                        <li>뷰어 다운로드</li>
+                        <li>cp사이트</li>
+                        <li>리디바탕</li>
+                    </ul>
+                    <ul>
+                        <li>기타문의</li>
+                        <li>원고투고</li>
+                        <li>사업제휴문의</li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <icon><a href="./img/페이스북.png">페이스북</a></icon>
+                    <icon><a href="./img/인스타그램.png">인스타그램</a></icon>
+                    <icon><a href="./img/트위터.png">트위터</a></icon>
+                    <icon>유튜브</icon>
+                    <icon>틱톡</icon>
+                </div>
+            </div>
+            <div id="footer_bottom">
+                <p>리디(주) 사업자정보</p>
+                <ul>
+                    <li>이용약관</li>
+                    <li>개인정보 처리방침</li>
+                    <li>청소년보호정책</li>
+                    <li>사업자확인</li>
+                </ul>
+
+                <p>RIDI Corp.</p>
+
             </div>
         </div>
-
-        
-        <footer>
-            <div class="container">
-                <div id="footer_top">
-                    <div class="left">
-                        <ul>
-                            <li>
-                                <a href="">고객센터</a>
-                            </li>
-                            <li>
-                                <a href="">공지사항</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>제휴카드</li>
-                            <li>뷰어 다운로드</li>
-                            <li>cp사이트</li>
-                            <li>리디바탕</li>
-                        </ul>
-                        <ul>
-                            <li>기타문의</li>
-                            <li>원고투고</li>
-                            <li>사업제휴문의</li>
-                        </ul>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="right">
-                        <icon>페이스북</icon>
-                        <icon>인스타그램</icon>
-                        <icon>트위터</icon>
-                        <icon>유튜브</icon>
-                        <icon>틱톡</icon>
-                    </div>
-                </div>
-                <div id="footer_bottom">
-                    <p>리디(주) 사업자정보</p>
-                    <ul>
-                        <li>이용약관</li>
-                        <li>개인정보 처리방침</li>
-                        <li>청소년보호정책</li>
-                        <li>사업자확인</li>
-                    </ul>
-
-                    <p>RIDI Corp.</p>
-
-                </div>
-            </div>
-        </footer>
+    </footer>
 
 
 
     </div>
- <!-- Swiper JS -->
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper('.mySwiper', {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
+        var swiper = new Swiper('.mySwiper', {
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        var swiper2 = new Swiper('.mySwiper2', {
+            slidesPerView: 8,     // 한 번에 1개씩 보여줌
+            spaceBetween: 10,     // 슬라이드 사이 간격 10px
+            loop: true,           // 무한 반복 설정
+            autoplay: {           // 자동 재생 설정
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.pagination2', // 두 번째 슬라이더 전용 동그라미
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.next2', // 두 번째 슬라이더 전용 화살표
+                prevEl: '.prev2',
+            },
+        });
+        new Swiper('.mySwiper4', {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            navigation: { nextEl: '.next4', prevEl: '.prev4' },
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                960: { slidesPerView: 3, spaceBetween: 25 },
+                1200: { slidesPerView: 3, spaceBetween: 30 } // 위의 슬라이더들과 동일한 3칸 너비
+            }
+        });
     </script>
     <script src="./js/book.js"></script>
-    
+
 </body>
+
 </html>
