@@ -18,7 +18,7 @@
             <div class="container">
                 <div id="header_top">
                     <div class="logo">
-                        <img src="" alt="log">
+                        <img src="./img/로고.png" alt="log">
 
                     </div>
                     <div class="searchbox">
@@ -70,7 +70,7 @@
             </div>
         </header>
         <div class="main">
-            <div class="container">
+            <div class="container" id="first container">
                 <nav>
                     <ul class="nav_list">
                         <li class="active">
@@ -110,37 +110,93 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide ">
-                                <div class="book1"><a href=""></a></div>
-                                <div class="book1"><a href=""></a></div>
-                                <div class="book1"><a href=""></a></div>
+                                <div class="book1"></div>
+                                <div class="book1"></div>
+                                <div class="book1"></div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="book1"></div>
+                                <div class="book1"></div>
+                                <div class="book1"></div>
                             </div>
                             <div class="swiper-slide ">
                                 <div class="book1"><a href=""></a></div>
                                 <div class="book1"><a href=""></a></div>
                                 <div class="book1"><a href=""></a></div>
                             </div>
-                            <div class="swiper-slide ">
-                                <div class="book1"><a href=""></a></div>
-                                <div class="book1"><a href=""></a></div>
-                                <div class="book1"><a href=""></a></div>
-                            </div>
-
 
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
+
                     </div>
 
                 </section>
                 <div class="main_icons">
-                    <icon>리디샵</icon>
-                    <icon>신간</icon>
-                    <icon>북스베스트</icon>
-                    <icon>이벤트</icon>
-                    <icon>리디온니</icon>
-                    <icon>이달의쿠폰</icon>
-                    <icon>대여</icon>
-                    <icon>혜택모아봄</icon>
+                    <a href="#" class="icon=item">
+                    <div class="icon-circle">
+                        <img src="./img/리디샵.webp" alt="리디샵"
+                        >
+                       
+                    </div>
+                    <span class="icon-text">리디샵</span>
+                    </a>
+                     <a href="#" class="icon=item">
+                    <div class="icon-circle">
+                        <img src="./img/신간.webp" alt="신간"
+                       >
+                        
+                    </div>
+                    <span class="icon-text">신간</span>
+                    </a>
+                     <a href="#" class="icon=item">
+                    <div class="icon-circle">
+                        <img src="./img/북스 베스트.webp" alt="베스트셀러"
+                        >
+                        
+                    </div>
+                    <span class="icon-text">북스베스트</span>
+                    </a>
+                      <a href="#" class="icon=item">
+                    <div class="icon-circle">
+                        <img src="./img/이벤트.webp" alt="이벤트"
+                        >
+                        <span></span>
+                    </div>
+                    <span class="icon-text">이벤트</span>
+                    </a>
+                     <a href="#" class="icon=item">
+                    <div class="icon-circle">
+                        <img src="./img/리디온리.webp" alt="리디온리"
+                       >
+                        <span></span>
+                    </div>
+                    <span class="icon-text">리디온리</span>
+                    </a>
+                    <a href="#" class="icon=item">
+                    <div class="icon-circle">
+                        <img src="./img/이달의쿠폰.webp" alt="이달의쿠폰"
+                        >
+                        <span></span>
+                    </div>
+                    <span class="icon-text">이달의 쿠폰</span>
+                    </a>
+                    <a href="#" class="icon=item">
+                    <div class="icon-circle">
+                        <img src="./img/대여.webp" alt="대여"
+                        >
+                        <span></span>
+                    </div>
+                    <span class="icon-text"> 대여</span>
+                    </a>
+                    <a href="#" class="icon=item">
+                    <div class="icon-circle">
+                        <img src="./img/혜택모아봄.webp" alt="혜택 모아봄"
+                        >
+                        <span></span>
+                    </div>
+                    <span class="icon-text">혜택 모아봄</span>
+                    </a>
                 </div>
                 <section class="container_slider" id="section2">
                     <div class="swiper mySwiper2">
@@ -154,6 +210,8 @@
                             <div class="swiper-slide book-card book2">Slide 6</div>
                             <div class="swiper-slide book-card book2">Slide 7</div>
                             <div class="swiper-slide book-card book2">Slide 8</div>
+                            <div class="swiper-slide book-card book2">Slide 9</div>
+ 
 
                         </div>
                         <div class="swiper-pagination2"></div>
@@ -169,7 +227,7 @@
                 <section id="section3">
                     <div class="section-header">
                         <h2>베스트</h2>
-                        <a href="#">더보기 &gt;</a>
+                        <a href="#"></a>
                     </div>
 
                     <div class="swiper mySwiper3">
@@ -186,17 +244,55 @@
             </div>
             <div class="container">
                 <section id="section4">
-                    <div class="seticon-header">
-                        <h2>이벤트</h2>
-                        <a href=""> 더보기</a>
+                    <div class="swiper mySwiper4" id="event-wrapper">
+        <div class="swiper-wrapper">
+            
+            <!-- 첫 번째 이벤트 배너 -->
+            <div class="swiper-slide">
+                <!-- 💡 배경색은 각 이벤트마다 다르므로 인라인 스타일로 넣는 것이 편합니다 -->
+                <a href="#" class="event-banner" style="background-color: #a32724;">
+                    <div class="event-text">
+                        <p>[50%▼] 신작 출간!</p>
+                        <p>프리다 맥파든 스릴러</p>
                     </div>
-
-                    <div class="swiper mySwiper4" id="event=wrapper">
-
-
+                    <div class="event-img">
+                        <img src="./img/9725c88e-9a68-4fff-9c51-77445ba57978.webp" alt="이벤트 1">
                     </div>
-                    <div class="swiper-button-next4"></div>
-                    <div class="swiper-button-prev4"></div>
+                </a>
+            </div>
+
+            <!-- 두 번째 이벤트 배너 -->
+            <div class="swiper-slide">
+                <a href="#" class="event-banner" style="background-color: #4b565c;">
+                    <div class="event-text">
+                        <p>내가 나라는 사실을</p>
+                        <p>증명해야 하는 시대</p>
+                    </div>
+                    <div class="event-img">
+                        <img src="./img/67bc0cf4-c14f-42c0-a655-cf66a259849e.webp" alt="이벤트 2">
+                    </div>
+                </a>
+            </div>
+
+            <!-- 세 번째 이벤트 배너 -->
+            <div class="swiper-slide">
+                <a href="#" class="event-banner" style="background-color: #3b261a;">
+                    <div class="event-text">
+                        <p>마음의 병을 고치는</p>
+                        <p>&lt;경의원&gt; 6천원 대여</p>
+                    </div>
+                    <div class="event-img">
+                        <img src="./img/901dbcd6-7997-43df-92af-635d8898c052.webp" alt="이벤트 3">
+                    </div>
+                </a>
+            </div>
+
+            <!-- 필요하면 슬라이드를 더 추가하세요! -->
+        </div>
+        
+        <!-- 좌우 화살표 (슬라이드 밖으로 뺐습니다) -->
+       
+    </div>
                 </section>
             </div>
 
@@ -210,10 +306,10 @@
                 <div class="left">
                     <ul>
                         <li>
-                            <a href="">고객센터</a>
+                            <a href=""><img src="./img/고객센터.png" alt="">고객센터</a>
                         </li>
                         <li>
-                            <a href="">공지사항</a>
+                            <a href=""><img src="./img/공지사항.png" alt="">   공지사항</a>
                         </li>
                     </ul>
                     <ul>
@@ -234,11 +330,13 @@
                     </ul>
                 </div>
                 <div class="right">
-                    <icon><a href="./img/페이스북.png">페이스북</a></icon>
-                    <icon><a href="./img/인스타그램.png">인스타그램</a></icon>
-                    <icon><a href="./img/트위터.png">트위터</a></icon>
-                    <icon>유튜브</icon>
-                    <icon>틱톡</icon>
+                    <a href="#" class="social-icon"><img src="./img/페이스북.png" alt="페이스북"></a>
+                    <a href="#" class="social-icon"><img src="./img/인스타그램.png" alt="인스타그램">
+                    </a>
+                      
+                    <a href="#" class="social-icon"><img src="./img/트위터.png" alt=""></a>
+                    <a href="#" class="social-icon"><img src="./img/유튜브.png" alt=""></a>
+                    <a href="#" class="social-icon"><img src="./img/틱톡.png" alt=""></a>
                 </div>
             </div>
             <div id="footer_bottom">
@@ -265,7 +363,7 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.mySwiper', {
-
+            loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',

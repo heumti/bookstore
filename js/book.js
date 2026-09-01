@@ -46,7 +46,7 @@
                         <h3>${doc.title}</h3>
                         <h6>${doc.authors}</h6>
                         <p>${doc.contents.substring(0,0)}</p>
-                        <button>click</button>
+                       
                         `
                     });
                 }

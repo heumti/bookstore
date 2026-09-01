@@ -26,7 +26,7 @@
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #444;
+       
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,7 +53,7 @@ header {
 
 #header_top {
     height: 60%;
-    background-color: aqua;
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,6 +64,11 @@ header {
     height: 30px;
     background-color: #999;
 }
+#header_top .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover 
+}
 
 #header_top .searchbox {
     width: 300px;
@@ -73,7 +78,6 @@ header {
     align-items: center;
     
 }
-
 
 #header_bottom {
     height: 40%;
@@ -89,6 +93,7 @@ header {
     display: flex;
     justify-content: space-evenly;
 }
+#top_nav
 
 #header_bottom .bottomright {
     width: 210px;
@@ -149,10 +154,12 @@ header {
 
 .hero_slider {
     height: 350px;
-    background-color: #1e1  ;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #303538;
+    border-radius: 1%;
+    bod
 
 }
 .main_icons {
@@ -164,6 +171,7 @@ header {
 }
 /* 1. 부모 (슬라이드 한 칸) 영역 설정 */
 :nth-of-type(1) .swiper-slide {
+    
     display: flex; 
     justify-content: space-between; 
     gap: 20px; 
@@ -199,7 +207,6 @@ header {
       .swiper-slide{
         text-align: center;
         font-size: 18px;
-        background: #444;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -228,10 +235,7 @@ header {
             font-weight: bold;
         }
 
-        #section4 {
-            background-color: aqua;
-        }
-
+       
 
 footer {
     width: 100%;
@@ -262,6 +266,11 @@ footer {
     height: 100%;
     background-color: lightblue;
 }
+#footer_top .left ul li img{
+    width: 23px;
+    height: 21px;
+
+}
 #footer_top .right{
     width: 35%;
     height: 100%;
@@ -270,6 +279,24 @@ footer {
     justify-content: flex-end;
     gap: 5px
 }
+.social-icon{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+.social-icon:hover {
+    background-color: #f8f9fa;
+}
+.social-icon img {
+    width: 20px; /* 내부 아이콘 크기 (필요에 따라 조절하세요) */
+    height: 20px;
+    object-fit: contain;}
 #footer_bottom ul{
     height: calc(100% - 19px);
     background-color: orange;

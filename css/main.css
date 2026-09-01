@@ -1,6 +1,61 @@
 @charset "utf-8";
 
-@charset "utf-8";
+.main_icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* 아이콘 사이 간격 넓게 */
+    padding: 30px 0; /* 위아래 여백 */
+    background-color: #fff; /* 임시 배경색(brown) 제거하고 하얗게 */
+}
+
+/* 개별 아이콘 (원 + 텍스트) 묶음 */
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 세로로 가운데 정렬 */
+    text-decoration: none; /* a태그 기본 밑줄 제거 */
+    color: #333;
+    width: 90px; /* 텍스트가 길어도 가운데 정렬이 잘 되도록 고정 너비 */
+}
+
+/* 동그란 원형 배경 */
+.icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%; /* 완벽한 원형 */
+    background-color: #f2f4f5; /* 아주 연한 회색 배경 (리디북스 컬러) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px; /* 원과 아래 텍스트 사이 간격 */
+    overflow: hidden; /* 리디샵처럼 이미지가 들어갈 때 원을 벗어나지 않게 */
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.2s ease; /* 마우스 오버 시 부드럽게 */
+}
+
+/* 원 안에 이미지를 넣었을 때 꽉 차게 */
+.icon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 아래쪽 텍스트 */
+.icon-text {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #303538;
+    text-align: center;
+    white-space: nowrap; /* '북스 베스트'가 두 줄로 쪼개지지 않게 */
+}
+
+/* 마우스를 올렸을 때 원 배경이 살짝 진해지는 효과 */
+.icon-item:hover .icon-circle {
+    background-color: #e6e8eb;
+}
 
 #slider {
     height: 415px;
@@ -41,11 +96,11 @@
 
 .mySwiper2 .swiper-slide {
     background:
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-weight: bold;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    font-size : 20px;
+    font-weight : bold;
   }
 
 /* 1. 기둥(슬라이드) 자체의 레이아웃 설정 */
@@ -422,4 +477,56 @@
     padding: 20px 10px;
     box-sizing: border-box;
     /* 💡 밖으로 튀어나가지 않게 박스 크기 통일 */
+}
+#section4 {
+    padding: 20px 0 50px 0; /* 위아래 여백 넉넉하게 */
+    background-color: #ffffff;}
+.event-banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* 텍스트는 왼쪽, 이미지는 오른쪽으로 밀기 */
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 0 20px; /* 배너 안쪽 좌우 여백 */
+    height: 100px; /* 배너 높이 고정 */
+    border-radius: 6px; /* 모서리 살짝 둥글게 */
+    text-decoration: none; /* a 태그 밑줄 제거 */
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 마우스 올렸을 때 살짝 위로 뜨는 효과 (선택사항) */
+.event-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* 왼쪽 텍스트 스타일 */
+.event-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* 줄 사이 간격 */
+    color: #ffffff; /* 글자색 하얗게 */
+}
+
+.event-text p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold; /* 글자 굵게 */
+    line-height: 1.3;
+}
+
+/* 오른쪽 책 이미지 스타일 */
+.event-img {
+    height: 100%; /* 배너 높이에 맞춤 */
+    display: flex;
+    align-items: flex-end; /* 이미지가 배너 바닥에 붙도록 설정 */
+}
+
+.event-img img {
+    height: 80px; /* 책 이미지 높이 (배너보다 살짝 작게) */
+    width: 55px; /* 책 비율에 맞춘 너비 */
+    object-fit: cover;
+    border-radius: 2px; /* 책 모서리 아주 살짝 둥글게 */
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2); /* 책에 입체감 주는 그림자 */
+    margin-bottom: 10px; /* 바닥에서 살짝 띄우기 */
 }
