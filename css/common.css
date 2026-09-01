@@ -123,34 +123,32 @@ header {
 .nav_list li a {
     display: inline-block;
     padding: 14px 2px;
-    /* 클릭하기 편하게 위아래 여백을 줍니다 */
+   
     font-size: 15px;
-    /* 너무 크지 않은 세련된 크기 */
+    
     font-weight: 500;
-    /* 약간 도톰한 기본 폰트 */
+   
     color: #5f666b;
-    /* 리디북스 특유의 짙은 회색 */
+    
     transition: color 0.2s ease;
-    /* 마우스*/
+    
 }
 
 .nav_list li a:hover {
     color: #303538;
-    /* 더 진한 검은색으로 변경 */
+    
 }
 
-/* 💡 4. 현재 보고 있는 메뉴 (Active) 강조 스타일 */
-/* HTML에서 첫 번째 <li>에 class="active"를 주었습니다 */
+
 .nav_list li.active a {
     color: #1f8ce6;
-    /* 리디북스 시그니처 파란색 */
+    
     font-weight: 700;
-    /* 글자를 아주 굵게 */
+    
     border-bottom: 3px solid #1f8ce6;
-    /* 파란색 두꺼운 밑줄 */
-    padding-bottom: 11px;
-    /* 밑줄 두께(3px)만큼 패딩을 빼서 높이를 맞춤 */
-}
+    
+    padding-bottom: 11px; }
+   
 
 .hero_slider {
     height: 350px;
@@ -169,12 +167,13 @@ header {
     gap:5px;
     background-color: brown;
 }
-/* 1. 부모 (슬라이드 한 칸) 영역 설정 */
+
 :nth-of-type(1) .swiper-slide {
     
     display: flex; 
     justify-content: space-between; 
     gap: 20px; 
+    background-color: #303538;
   
     align-items: center; 
     padding: 10px;
@@ -219,15 +218,15 @@ header {
         object-fit: cover;
       }
         .mySwiper2 {
-            width: 100%; /* 가로 크기를 화면의 60%로 줄임 */
-            height: 350px; /* 높이를 첫 번째 슬라이더와 동일하게 350px로 변경 */
-            margin: 0 auto; /* 가운데 정렬 */
+            width: 100%; 
+            height: 350px; 
+            margin: 0 auto; 
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.3); /* 주황색 그림자 */
+            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.3); 
         }
 
         .mySwiper2 .swiper-slide {
-            background: #f97316; /* 주황색 배경 */
+            background: #f97316; 
             display: flex;
             justify-content: center;
             align-items: center;

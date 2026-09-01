@@ -367,7 +367,7 @@
     text-overflow: ellipsis;
 }
 
-/* 별점 표시 (카카오엔 별점이 없어서 임의 생성용 디자인) */
+
 .list-rating {
     font-size: 12px;
     color: #fa722e;
