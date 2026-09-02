@@ -13,11 +13,53 @@
           Arial,
           sans-serif;
         font-size: 14px;
-        color: #fff;
+        
         margin: 0;
         padding: 0;
       }
+      
+      .searchbox {
+    width: 250  px;
+    height: 36px;
+    background-color: #f2f4f5; /* 연한 회색 */
+    border-radius: 18px; /* 양쪽을 둥글게 */
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 검색창과 로그인 사이의 간격을 조절하세요 (원하는 대로 늘리거나 줄일 수 있습니다) */
+}
 
+/* 🚨 왕눈이가 된 돋보기 아이콘 크기 강력 고정 */
+.searchbox .search-icon {
+    width: 16px !important;
+    height: 16px !important;
+    stroke: #808991; /* 돋보기 선 색상 */
+    margin-right: 8px;
+    flex-shrink: 0; /* 공간이 좁아져도 찌그러지지 않게 */
+}
+
+/* 검색 입력칸(input) 기본 테두리 지우기 */
+.searchbox input[type="search"] {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+    color: #333;
+}
+
+/* 로그인 글자 스타일 설정 */
+#login {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+}
       .swiper {
         width: 100%;
         height: 100%;
@@ -46,14 +88,14 @@
 
 header {
     width: 100%;
-    height: 115px;
-    background-color: lightblue;
+    height: 90px;
+    border-bottom: 1px solid #eaeaea; 
+    box-sizing: border-box
    
 }
 
 #header_top {
     height: 60%;
-   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +104,6 @@ header {
 #header_top .logo {
     width: 70px;
     height: 30px;
-    background-color: #999;
 }
 #header_top .logo img {
     width: 100%;
@@ -70,35 +111,37 @@ header {
     object-fit:cover 
 }
 
-#header_top .searchbox {
-    width: 300px;
-    height: 30px;
-    background-color: #999;
-    display: flex;
-    align-items: center;
-    
-}
 
 #header_bottom {
     height: 40%;
-    background-color: peru;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+
+    box-sizing: border-box;
 } 
 #header_bottom .bottomleft {
     width: 285px;
     height: 30px;
-    background-color: #999;
     display: flex;
     justify-content: space-evenly;
 }
-#top_nav
+#top_nav ul li a {
+    text-decoration: none;
+    color: #808991; /* 기본 메뉴들은 연한 회색 */
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* 🌟 3. 현재 페이지(active) 글자 강조하기 */
+#top_nav ul li.active a {
+    color: rgba(30,158,255,1); /* 완전 까만색으로 변경 */
+    font-weight: bold; /* 글씨 굵게 */
+}
 
 #header_bottom .bottomright {
     width: 210px;
     height: 30px;
-    background-color: #999;
     display: flex;
     justify-content: space-between;
     margin-left: 8px;
@@ -109,7 +152,7 @@ header {
     justify-content: flex-start;
     gap: 5px;}
 .main{
-    margin: 30px;
+    margin: 0 30px 30px 30px;
 
 }
 .nav_list{
@@ -157,15 +200,23 @@ header {
     align-items: center;
     border: 1px solid #303538;
     border-radius: 1%;
-    bod
+    
 
+}
+.hero_slider .swiper-slide{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: #fff;
 }
 .main_icons {
     display:flex ;
     justify-content: center;
     align-items: center;
     gap:5px;
-    background-color: brown;
 }
 
 :nth-of-type(1) .swiper-slide {
@@ -173,7 +224,6 @@ header {
     display: flex; 
     justify-content: space-between; 
     gap: 20px; 
-    background-color: #303538;
   
     align-items: center; 
     padding: 10px;
@@ -188,15 +238,6 @@ header {
 }
 
 
-.swiper-slide > div:nth-child(1) {
-    background-color: lightcoral;
-}
-.swiper-slide > div:nth-child(2) {
-    background-color: lightseagreen;
-}
-.swiper-slide > div:nth-child(3) {
-    background-color: cornflowerblue;
-}
 
    .swiper {
         width: 100%;
@@ -222,11 +263,10 @@ header {
             height: 350px; 
             margin: 0 auto; 
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.3); 
+            
         }
 
         .mySwiper2 .swiper-slide {
-            background: #f97316; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -241,40 +281,54 @@ footer {
     height: 350px;
    
     border-top: 5px solid #eee; 
-    background-color: green;
 }
 
 #footer_top {
     height: 190px;
-    background-color: skyblue;
     display: flex;
     justify-content: space-between;
 }
 #footer_top .left{
-    width: 60%;
+    width: 70%;
     height: 100%;
-    background-color: burlywood;
     display: flex;
-    justify-content: space-between;
-    background-color: aquamarine;
+    justify-content: flex-start;
+    gap: 100px;
 
 
 }
 #footer_top .left ul{
-    width: 20%;
-    height: 100%;
-    background-color: lightblue;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer_top .left ul li {
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    
+}
+#footer_top .left ul li a{
+    display: flex;
+    align-items: center;
+    color: #666;
+    text-decoration: none;
+    font-weight: bold;
 }
 #footer_top .left ul li img{
-    width: 23px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    object-fit: contain;
 
 }
 #footer_top .right{
     width: 35%;
     height: 100%;
      display: flex;
-     background-color: #f97316;
+
     justify-content: flex-end;
     gap: 5px
 }
@@ -298,7 +352,75 @@ footer {
     object-fit: contain;}
 #footer_bottom ul{
     height: calc(100% - 19px);
-    background-color: orange;
     display: flex;
     justify-content: left;
+}
+
+.company-info-btn{
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.company-info-btn .arrow{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #888;
+    border-bottom: 2px solid #888;
+    transform: rotate(45deg);
+    margin-left: 8px;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease;
+}
+.company-info-btn.open .arrow {
+    transform: rotate(-135deg);
+    margin-bottom: -2px;
+}
+
+/* --- 숨겨진 사업자 정보 내용 --- */
+.company-info-content {
+    display: none; /* 🚨 말씀하신 대로 여기서 숨겨줍니다! */
+    font-size: 13px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* 자바스크립트가 .show 클래스를 붙여주면 화면에 나타남 */
+.company-info-content.show {
+    display: block; 
+}
+
+/* 텍스트 사이의 세로선(|) 색상 연하게 */
+.company-info-content .divider {
+    color: #ddd;
+    margin: 0 4px;
+}
+
+/* 기존 하단 링크 가로 정렬 (깨짐 방지) */
+.footer-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 13px;
+}
+.copyright {
+    color: #999;
+    font-size: 13px;
+}
+#footer_bottom ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
 }

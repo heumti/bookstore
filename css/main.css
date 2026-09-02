@@ -69,10 +69,24 @@
 
 #slider .slide_content {
     width: 30%;
-    height: 90%;
+    height: 80%;
     border-radius: 20px;
     background-color: beige;
 
+}
+.book1 {
+
+    flex: 1;
+    
+    border-radius: 10px;
+    padding: 25px 15px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+
+    height: auto !important;
 }
 .book1 img{
     height: 180px;
@@ -80,6 +94,33 @@
     object-fit: cover; 
     margin: 0 auto 15px auto; 
     display: block;
+}
+.book1 h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin:  15px 0 5px 0;
+    color: #303538 !important;
+    width: 100%;
+   text-align: center;
+   white-space: normal; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 2줄까지만 보여주기 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+    
+}
+.swiper-slide .book1:nth-child(1) {
+    background-color:skyblue; 
+}
+
+
+.swiper-slide .book1:nth-child(2) {
+    background-color: #fcf5ee; 
+}
+
+.swiper-slide .book1:nth-child(3) {
+    background-color: #f2f7f9; 
 }
 
 .mySwiper2 {
@@ -90,12 +131,12 @@
     margin: 0 auto;
     /* 가운데 정렬 */
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(255, 152, 0, 0.3);
+    
     /* 주황색 그림자 */
 }
 
 .mySwiper2 .swiper-slide {
-    background:
+   
     display : flex;
     justify-content : center;
     align-items : center;
@@ -282,7 +323,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 20px;
+    margin-top: px;
 }
 
 .section-header a {
@@ -529,4 +570,134 @@
     border-radius: 2px; /* 책 모서리 아주 살짝 둥글게 */
     box-shadow: -2px 0 8px rgba(0,0,0,0.2); /* 책에 입체감 주는 그림자 */
     margin-bottom: 10px; /* 바닥에서 살짝 띄우기 */
+}
+.best-ranking-section {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.best-ranking-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.best-ranking-section .more-link {
+    font-size: 13px;
+    color: #808991;
+    text-decoration: none;
+}
+
+/* 슬라이드 1칸(기둥) 설정: 세로로 3개 배치 */
+.best-ranking-section .list-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* 책들 사이 위아래 간격 */
+    box-sizing: border-box;
+}
+
+/* 책 항목 가로 배치 (표지 - 순위 - 정보) */
+.best-ranking-section .list-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 6px;
+    padding: 5px; /* 마우스 오버 시 영역 */
+}
+
+.best-ranking-section .list-item:hover {
+    background-color: #f2f4f5;
+}
+
+/* 1. 책 표지 */
+.best-ranking-section .item-img-box {
+    width: 60px;
+    height: 86px;
+    flex-shrink: 0;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.best-ranking-section .item-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. 순위 숫자 */
+.best-ranking-section .list-rank {
+    width: 44px; /* 순위가 차지하는 고정 너비 */
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    flex-shrink: 0;
+}
+
+/* 3. 텍스트 정보 (제목, 작가, 별점) */
+.best-ranking-section .list-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    min-width: 0; /* 글자가 상자를 뚫고 나가는 것 방지 */
+}
+
+.best-ranking-section .list-info h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #303538;
+    margin: 0 0 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.best-ranking-section .list-info p {
+    font-size: 13px;
+    color: #808991;
+    margin: 0 0 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 별점 영역 */
+.best-ranking-section .list-rating {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.best-ranking-section .list-rating .star {
+    color: #fa722e; /* 주황색 별 */
+    margin-right: 2px;
+    font-size: 11px;
+}
+
+.best-ranking-section .list-rating .score {
+    color: #fa722e;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.best-ranking-section .list-rating .count {
+    color: #999;
+}
+
+/* 둥근 그림자 화살표 디자인 (이미지 속 버튼과 동일하게) */
+.rounded-arrow {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    color: #333 !important;
+}
+.rounded-arrow::after {
+    font-size: 16px !important;
+    font-weight: bold;
 }
