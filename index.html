@@ -117,9 +117,10 @@
                     </ul>
                 </nav>
                 <section class="hero_slider" id="section1">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide ">
+                    <div class="swiper-outer-wrap">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide "></a>
                                 <div class="book1"></div>
                                 <div class="book1"></div>
                                 <div class="book1"></div>
@@ -136,11 +137,11 @@
                             </div>
 
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next rounded-arrow black-arrow"></div>
+                        <div class="swiper-button-prev rounded-arrow black-arrow"></div>
 
+                        </div>
                     </div>
-
                 </section>
                 <div class="main_icons">
                     <a href="#" class="icon=item">
@@ -201,7 +202,7 @@
                     </a>
                 </div>
                 <section class="container_slider" id="section2">
-                    
+                    <h2>같이 볼만한 작품 </h2>
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide book-card book2">
@@ -232,16 +233,17 @@
                         <h2 style="color: black;">지금 많이 읽는 작품</h2>
                         <a href="#"></a>
                     </div>
-
+                <div class="swiper-outer-wrap">
                     <div class="swiper mySwiper3">
                         <!-- JS가 이곳에 기둥(swiper-slide)들을 채워 넣습니다 -->
                         <div class="swiper-wrapper" id="best-wrapper">
                             <!-- 로딩 메시지 -->
                             <p style="padding: 20px;">순위 데이터를 불러오는 중입니다...</p>
                         </div>
+                </div>
                         <!-- 좌우 화살표 -->
-                        <div class="swiper-button-next next3"></div>
-                        <div class="swiper-button-prev prev3"></div>
+                        <div class="swiper-button-next next3 rounded-arrow black-arrow"></div>
+                        <div class="swiper-button-prev prev3 rounded-arrow black-arrow"></div>
                     </div>
                 </section>
             </div>
@@ -303,11 +305,12 @@
         <h2 style="color: #000; font-weight: bold; font-size: 18px;">베스트</h2>
         <a href="#" class="more-link">더보기 <span class="arrow">&gt;</span></a>
     </div>
-    
+    <div class="swiper-outer-wrap">
     <div class="swiper mySwiper5">
         <div class="swiper-wrapper" id="new-best-wrapper">
             <!-- JavaScript가 데이터를 3개씩 묶어서 여기에 넣어줍니다 -->
         </div>
+    </div>
         
         <!-- 리디북스 스타일의 둥근 화살표 -->
         <div class="swiper-button-next next5 rounded-arrow"></div>
@@ -396,6 +399,10 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+             autoplay: {           // 자동 재생 설정
+                delay: 2500,
+                disableOnInteraction: false,
+            },
         });
         var swiper2 = new Swiper('.mySwiper2', {
             slidesPerView: 8,     // 한 번에 1개씩 보여줌
@@ -421,7 +428,7 @@
             breakpoints: {
                 640: { slidesPerView: 2, spaceBetween: 20 },
                 960: { slidesPerView: 3, spaceBetween: 25 },
-                1200: { slidesPerView: 3, spaceBetween: 30 } // 위의 슬라이더들과 동일한 3칸 너비
+                1200: { slidesPerView: 3, spaceBetween: 5 } // 위의 슬라이더들과 동일한 3칸 너비
             }
         });
         const navItems = document.querySelectorAll('#top_nav ul li');

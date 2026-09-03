@@ -61,7 +61,7 @@
                 const REST_API_KEY = "d18f434b8312735910e3f93ea885a651";
                 const params = new URLSearchParams({
                     target: "title",
-                    query: "베스트셀러", 
+                    query: "100만부", 
                     size: 15 
                 });
                 const url = `https://dapi.kakao.com/v3/search/book?${params}`;
@@ -86,8 +86,14 @@
                         const mockRating = (Math.random() * 1 + 4).toFixed(1); 
                         const mockReview = Math.floor(Math.random() * 500) + 50;
 
+                        let clickEvent = `window.open('${doc.url}')`;
+
+                        if (rank === 1) {
+
+        clickEvent = `location.href='./sub.html'`;}
+
                         htmlString += `
-                            <div class="list-item" onclick="window.open('${doc.url}')">
+                            <div class="list-item" onclick="${clickEvent}")">
                                 <img src="${thumbnail}" alt="표지">
                                 <div class="list-rank">${rank}</div>
                                 <div class="list-info">

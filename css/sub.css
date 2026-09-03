@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+#main_wrap{
+    display: flex;
+    height: 1000px;
+    width: 1120px;
+}
+
+#wrap #mainWrap #main_head .thum_img {
+  width: 220px;
+  height: 344px;
+  float: left;
+}
