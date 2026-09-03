@@ -117,6 +117,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-top: 20px;
 
     box-sizing: border-box;
 } 
@@ -194,12 +195,12 @@ header {
    
 
 .hero_slider {
-    height: 350px;
+    height: 414px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #303538;
-    border-radius: 1%;
+
+    border-radius: 5px;
     
 
 }
@@ -208,9 +209,9 @@ header {
     justify-content: space-between;
     align-items: stretch;
     gap: 20px;
-    padding: 20px 40px;
+    
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: transparent
 }
 .main_icons {
     display:flex ;
@@ -224,16 +225,16 @@ header {
     display: flex; 
     justify-content: space-between; 
     gap: 20px; 
+    height: 100%;
   
     align-items: center; 
-    padding: 10px;
     box-sizing: border-box;
 }
 
 
 .swiper-slide > div {
     flex: 1; 
-    height: 250px; 
+    height: 100%; 
     border-radius: 8px; 
 }
 
