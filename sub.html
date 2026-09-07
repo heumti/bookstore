@@ -80,21 +80,80 @@
             </div>
         </header>
         <main>
-            <div class="container" id="main_wrap">
-                <div class="main_head">
-                    <div class="thumbimg">
-                        <img src="" alt="">
+          <div class="container sub-layout">
+        <!-- 좌측: 도서 상세 영역 -->
+        <section class="book-detail-wrapper">
+            
+            <!-- 상단: 표지 및 기본 정보 -->
+            <div class="book-top">
+                <!-- 1. 표지 이미지 영역 -->
+                <div class="book-cover-box">
+                    <img id="bookThumbnail" src="https://via.placeholder.com/220x320?text=Loading..." alt="도서 표지">
+                    <button class="btn-preview">미리보기</button>
+                </div>
+
+                <!-- 2. 도서 텍스트 정보 영역 -->
+                <div class="book-info-box">
+                    <h2 class="book-title" id="bookTitle">도서 제목을 불러오는 중...</h2>
+                    
+                    <div class="author-pub">
+                        <span id="bookAuthors">저자명</span> 저 
+                        <span class="divider">|</span> 
+                        <span id="bookPublisher">출판사</span>
                     </div>
 
+                    <!-- 가격 박스 -->
+                    <div class="price-box">
+                        <div class="price-row line-through">
+                            <span class="label">종이책 정가</span>
+                            <span class="val" id="bookPrice">-원</span>
+                        </div>
+                        <div class="price-row total">
+                            <span class="label">판매가</span>
+                            <span class="val"><strong class="highlight" id="bookSalePrice">-원</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- 구매 버튼 -->
+                    <div class="action-buttons">
+                        <button class="btn-icon">❤️</button>
+                        <button class="btn-icon">🛒</button>
+                        <button class="btn-buy">소장하기</button>
+                    </div>
                 </div>
-                <div class="thumbtitle">
+            </div>
 
+            <!-- 중단: 도서 메타 정보 (회색 박스) -->
+            <div class="book-meta-info">
+                <div class="meta-item">
+                    <span class="label">출간일</span>
+                    <span class="val" id="bookDatetime">-</span>
                 </div>
-
+                <div class="meta-item">
+                    <span class="label">ISBN</span>
+                    <span class="val" id="bookIsbn">-</span>
+                </div>
             </div>
-            </div>
 
-        </main>
+            <!-- 하단: 작품 소개 -->
+            <div class="book-description">
+                <h3>작품 소개</h3>
+                <p class="desc-text" id="bookContents">
+                    작품 소개 데이터를 불러오는 중입니다...
+                </p>
+            </div>
+            
+        </section>
+
+        <!-- 우측: 사이드바 영역 -->
+        <aside class="sidebar">
+            <!-- 배너 영역 (고정 이미지 사용 권장) -->
+            <div class="ad-banner">
+                <img src="https://via.placeholder.com/250x300/f4f4f4/666666?text=배너+영역" alt="광고 배너">
+            </div>
+        </aside>
+    </div>
+</main>
 
 
 

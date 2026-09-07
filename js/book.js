@@ -26,7 +26,7 @@
             try {
                 
                 const queries = [
-                    { query: "바이브코딩", sectionId: "section1" },
+
                     { query: "오디세이", sectionId: "section2" }
                 ];
 
@@ -36,18 +36,28 @@
                     // 해당 섹션 내의 .box 요소 8개 선택
                     const section = document.querySelector(`#${sectionId}`);
                     const boxElements = section.querySelectorAll(".book1, .book2" );
+                     const mockRating = (Math.random() * 1 + 4).toFixed(1); 
+                const mockReview = Math.floor(Math.random() * 1000) + 50;
 
                     boxElements.forEach((box, i) => {
                         const doc = data.documents[i];
                         if (!doc) return;
 
                        
-                        box.innerHTML = `<img src="${doc.thumbnail}">
-                        <h3>${doc.title}</h3>
-                        <h6>${doc.authors}<h6>
-                        <p>${doc.contents.substring(0,0)}</p>
-                       
-                        `
+                       box.innerHTML = `
+                             <img src="${doc.thumbnail}" alt="표지">
+                             <h3>${doc.title}</h3>
+                            <h6>${doc.authors}</h6>
+                            <p>${doc.contents.substring(0,0)}</p>
+    
+                            <!-- 별점과 리뷰 개수를 묶어주는 리디 스타일 클래스 적용 -->
+                            <div class="list-rating">
+                            <span class="star">★</span>
+                            <span class="score">${mockRating}</span>
+                            <span class="count">(${mockReview})</span>
+                </div>
+`;
+                        
                     });
                 }
             } catch (error) {
