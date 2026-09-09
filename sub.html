@@ -19,205 +19,196 @@
                 <div id="header_top">
                     <div class="logo">
                         <img src="./img/로고.png" alt="log">
-
                     </div>
                     <div class="header-right">
-                    <div class="searchbox">
-                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                        <input type="search" id="search">
-                     
-
+                        <div class="searchbox">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="search" id="search">
                         </div>
                         <div id="login">
-                        <span>로그인</span>
-                        <span>/회원가입</span>
-
-
+                            <span>로그인</span>
+                            <span>/회원가입</span>
                         </div>
-
-                       
-
                     </div>
-
-
-
-
                 </div>
                 <div id="header_bottom">
                     <div class="bottomleft">
                         <nav id="top_nav">
                             <ul>
-                                <li><a href="">추천</a>
-                                </li>
-                                <li><a href="">만화</a>
-                                </li>
-                                <li><a href="">웹툰</a>
-                                </li>
-                                <li><a href="">웹소설</a>
-                                </li>
-                                <li><a href="">도서</a>
-                                </li>
-                                <li><a href="">리디샵</a>
-                                </li>
-                                <li><a href="">셀렉트</a>
-                                </li>
+                                <li><a href="">추천</a></li>
+                                <li><a href="">만화</a></li>
+                                <li><a href="">웹툰</a></li>
+                                <li><a href="">웹소설</a></li>
+                                <li><a href="">도서</a></li>
+                                <li><a href="">리디샵</a></li>
+                                <li><a href="">셀렉트</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="bottomright">
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" class="fig-zt3wi2"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M4.5 7h15M4.5 12h15M4.5 17h15"></path></svg>전체 카테고리
-                            </a>
                         </span>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" aria-label="리디 캐시 충전" class="fig-jdb16z"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.4"></circle><path fill="currentColor" d="M9.75 12.1a2.28 2.28 0 0 1 2.292-2.267c.626 0 1.192.248 1.605.65a.65.65 0 1 0 .906-.933 3.6 3.6 0 0 0-2.511-1.017c-1.979 0-3.592 1.592-3.592 3.567s1.614 3.567 3.592 3.567c.976 0 1.862-.387 2.51-1.015a.65.65 0 1 0-.906-.933 2.3 2.3 0 0 1-1.604.648A2.28 2.28 0 0 1 9.75 12.1"></path></svg> 캐시충전</a>
-                           
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" aria-label="리디 캐시 충전" class="fig-jdb16z"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.4"></circle><path fill="currentColor" d="M9.75 12.1a2.28 2.28 0 0 1 2.292-2.267c.626 0 1.192.248 1.605.65a.65.65 0 1 0 .906-.933 3.6 3.6 0 0 0-2.511-1.017c-1.979 0-3.592 1.592-3.592 3.567s1.614 3.567 3.592 3.567c.976 0 1.862-.387 2.51-1.015a.65.65 0 1 0-.906-.933 2.3 2.3 0 0 1-1.604.648A2.28 2.28 0 0 1 9.75 12.1"></path></svg> 캐시충전
                         </span>
                     </div>
                 </div>
             </div>
         </header>
+        
         <main>
-          <div class="container sub-layout">
-        <!-- 좌측: 도서 상세 영역 -->
-        <section class="book-detail-wrapper">
-            
-            <!-- 상단: 표지 및 기본 정보 -->
-            <div class="book-top">
-                <!-- 1. 표지 이미지 영역 -->
-                <div class="book-cover-box">
-                    <img id="bookThumbnail" src="https://via.placeholder.com/220x320?text=Loading..." alt="도서 표지">
-                    <button class="btn-preview">미리보기</button>
-                </div>
+            <div class="container detail-layout">
+                <!-- 📌 좌측: 메인 콘텐츠 영역 -->
+               <div class="content-area">
+                   <!-- 1. 도서 상단 프로필 -->
+                   <section class="book-profile" id="ajax-book-profile">
+                       <div class="cover-area">
+                           <img id="bookThumbnail" src="" alt="표지">
+                       </div>
+                       <div class="info-area">
+                           <h2 id="bookTitle">도서 제목</h2>
+                           <div class="book-meta">
+                               <span id="bookAuthors">저자</span> 저 <span class="divider-bar">|</span> <span id="bookPublisher">출판사</span>
+                           </div>
+                           <div class="price-box">
+                               <div class="original-price">
+                                   <span>종이책 정가</span><span id="bookPrice">-원</span>
+                               </div>
+                               <div class="sale-price">
+                                   <span>판매가</span><span id="bookSalePrice">-원</span>
+                               </div>
+                           </div>
+                           <div class="btn-box">
+                               <button class="btn-icon">❤️</button>
+                               <button class="btn-icon">🛒</button>
+                               <button class="btn-primary">소장하기</button>
+                           </div>
+                       </div>
+                   </section>
 
-                <!-- 2. 도서 텍스트 정보 영역 -->
-                <div class="book-info-box">
-                    <h2 class="book-title" id="bookTitle">도서 제목을 불러오는 중...</h2>
-                    
-                    <div class="author-pub">
-                        <span id="bookAuthors">저자명</span> 저 
-                        <span class="divider">|</span> 
-                        <span id="bookPublisher">출판사</span>
-                    </div>
+                   <!-- 2. 작품 정보 (더보기 버튼 포함) -->
+                   <section class="detail-section" id="ajax-book-desc">
+                       <h3 class="section-title">작품 정보</h3>
+                       <ul class="tab-menu">
+                           <li class="active" data-tab="tab-intro">작품 소개</li>
+                           <li data-tab="tab-index">목차</li>
+                       </ul>
+                       <div class="tab-content active" id="tab-intro">
+                           <div class="intro-wrapper" id="intro-wrapper">
+                               <p class="desc-text" id="txt-intro">텍스트 파일을 불러오는 중입니다...</p>
+                               <div class="intro-gradient" id="intro-gradient">
+                                   <button class="btn-more" id="btn-more">더보기 ▼</button>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="tab-content" id="tab-index">
+                           <p class="desc-text" id="txt-index">텍스트 파일을 불러오는 중입니다...</p>
+                       </div>
+                   </section>
 
-                    <!-- 가격 박스 -->
-                    <div class="price-box">
-                        <div class="price-row line-through">
-                            <span class="label">종이책 정가</span>
-                            <span class="val" id="bookPrice">-원</span>
-                        </div>
-                        <div class="price-row total">
-                            <span class="label">판매가</span>
-                            <span class="val"><strong class="highlight" id="bookSalePrice">-원</strong></span>
-                        </div>
-                    </div>
+                   <!-- 3. 작가 정보 (작가 탭 포함) -->
+                   <section class="detail-section" id="ajax-author-desc">
+                       <h3 class="section-title">작가</h3>
+                       <ul class="tab-menu">
+                           <li class="active" data-tab="author-profile">작가 프로필</li>
+                           <li data-tab="author-intro">작가 소개</li>
+                       </ul>
+                       <div class="tab-content active" id="author-profile">
+                           <h4 id="authorNameTitle">저자명</h4>
+                           <p class="desc-text">저자 상세 프로필 정보입니다.</p>
+                       </div>
+                       <div class="tab-content" id="author-intro">
+                           <p class="desc-text">저자 소개 정보가 없습니다.</p>
+                       </div>
+                   </section>
 
-                    <!-- 구매 버튼 -->
-                    <div class="action-buttons">
-                        <button class="btn-icon">❤️</button>
-                        <button class="btn-icon">🛒</button>
-                        <button class="btn-buy">소장하기</button>
-                    </div>
-                </div>
+                   <!-- 4. 리뷰 영역 -->
+                   <section class="detail-section" id="ajax-review">
+                       <h3 class="section-title">리뷰</h3>
+                       <div class="review-score-box">
+                           ⭐ 4.7 <span class="review-count">(1,024명 참여)</span>
+                       </div>
+                   </section>
+               </div>
+               
+               <!-- 📌 우측: 퀵 내비게이션 (사이드바) -->
+               <aside class="sidebar-area">
+                   <div class="sticky-nav">
+                       <h4>페이지 안내</h4>
+                       <ul>
+                           <li><a href="">작품 정보</a></li>
+                           <li><a href="">작가</a></li>
+                           <li><a href="">리뷰</a></li>
+                       </ul>
+                   </div>
+               </aside>
             </div>
-
-            <!-- 중단: 도서 메타 정보 (회색 박스) -->
-            <div class="book-meta-info">
-                <div class="meta-item">
-                    <span class="label">출간일</span>
-                    <span class="val" id="bookDatetime">-</span>
-                </div>
-                <div class="meta-item">
-                    <span class="label">ISBN</span>
-                    <span class="val" id="bookIsbn">-</span>
-                </div>
-            </div>
-
-            <!-- 하단: 작품 소개 -->
-            <div class="book-description">
-                <h3>작품 소개</h3>
-                <p class="desc-text" id="bookContents">
-                    작품 소개 데이터를 불러오는 중입니다...
-                </p>
-            </div>
-            
-        </section>
-
-        <!-- 우측: 사이드바 영역 -->
-        <aside class="sidebar">
-            <!-- 배너 영역 (고정 이미지 사용 권장) -->
-            <div class="ad-banner">
-                <img src="https://via.placeholder.com/250x300/f4f4f4/666666?text=배너+영역" alt="광고 배너">
-            </div>
-        </aside>
-    </div>
-</main>
-
-
+        </main>
 
         <footer>
-        <div class="container">
-            <div id="footer_top">
-                <div class="left">
-                    <ul>
-                        <li>
-                            <a href=""><img src="./img/고객센터.png" alt="">고객센터</a>
-                        </li>
-                        <li>
-                            <a href=""><img src="./img/공지사항.png" alt=""> 공지사항</a>
-                        </li>
-                    </ul>
-                    <ul><li style="font-weight: bold;">서비스</li>
-                        <li>제휴카드</li>
-                        <li>뷰어 다운로드</li>
-                        <li>cp사이트</li>
-                        <li>리디바탕</li>
-                    </ul>
-                    <ul>
-                        <li style="font-weight: bold;">기타문의</li>
-                        <li>원고투고</li>
-                        <li>사업제휴문의</li>
-                    </ul>
-                    <ul>
-                        <li style="font-weight: bold;">회사</li>
-                        <li>회사 소개</li>
-                        <li>인재 채용 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 14 14" aria-label="NEW" class="fig-18yedlc"><circle cx="7" cy="7" r="7" fill="currentColor"></circle><path fill="#fff" d="M9.18 9.798h-.992L5.932 6.302v3.496H4.82V4.102h.992L8.068 7.59V4.102H9.18z"></path></svg></li>
-                    </ul>
+            <div class="container">
+                <div id="footer_top">
+                    <div class="left">
+                        <ul>
+                            <li>
+                                <a href=""><img src="./img/고객센터.png" alt="">고객센터</a>
+                            </li>
+                            <li>
+                                <a href=""><img src="./img/공지사항.png" alt=""> 공지사항</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="fw-bold">서비스</li>
+                            <li>제휴카드</li>
+                            <li>뷰어 다운로드</li>
+                            <li>cp사이트</li>
+                            <li>리디바탕</li>
+                        </ul>
+                        <ul>
+                            <li class="fw-bold">기타문의</li>
+                            <li>원고투고</li>
+                            <li>사업제휴문의</li>
+                        </ul>
+                        <ul>
+                            <li class="fw-bold">회사</li>
+                            <li>회사 소개</li>
+                            <li>인재 채용 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 14 14" aria-label="NEW" class="fig-18yedlc"><circle cx="7" cy="7" r="7" fill="currentColor"></circle><path fill="#fff" d="M9.18 9.798h-.992L5.932 6.302v3.496H4.82V4.102h.992L8.068 7.59V4.102H9.18z"></path></svg></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="social-icon"><img src="./img/페이스북.png" alt="페이스북"></a>
+                        <a href="#" class="social-icon"><img src="./img/인스타그램.png" alt="인스타그램"></a>
+                        <a href="#" class="social-icon"><img src="./img/트위터.png" alt=""></a>
+                        <a href="#" class="social-icon"><img src="./img/유튜브.png" alt=""></a>
+                        <a href="#" class="social-icon"><img src="./img/틱톡.png" alt=""></a>
+                    </div>
                 </div>
-                <div class="right">
-                    <a href="#" class="social-icon"><img src="./img/페이스북.png" alt="페이스북"></a>
-                    <a href="#" class="social-icon"><img src="./img/인스타그램.png" alt="인스타그램">
-                    </a>
+                <div id="footer_bottom">
+                    <button class="company-info-btn" id="companyBtn">
+                    리디(주) 사업자정보<span class="arrow"></span>
+                    </button>
 
-                    <a href="#" class="social-icon"><img src="./img/트위터.png" alt=""></a>
-                    <a href="#" class="social-icon"><img src="./img/유튜브.png" alt=""></a>
-                    <a href="#" class="social-icon"><img src="./img/틱톡.png" alt=""></a>
+                    <div class="company-info-content" id="companyContent">
+                        <p>대표자 배기식<span class="divider">ㅣ</span>사업자 등록번호 120-87-27435 <span class="divider">ㅣ</span>통신판매업 신고번호 2009-서울강남-02139   </p>
+                        <p>이메일 help@ridi.com <span class="divider">ㅣ</span>대표전화 1644-0331 <span class="divder">ㅣ</span>주소 서울특별시 강남구 테헤란로 325, 어반벤치빌딩 4,10층,11층(역삼동)</p>
+                    </div>  
+                    <ul>
+                        <li><a href=""><p>이용약관</p></a></li>
+                        <li><a href=""><p class="fw-bold">개인정보 처리방침</p></a>  </li>
+                        <li><a href=""><p>청소년보호정책</p></a></li>
+                        <li><a href=""><p>사업자확인</p></a></li>
+                    </ul>
+
+                    <p>RIDI Corp.</p>
                 </div>
             </div>
-            <div id="footer_bottom">
-                <button class="company-info-btn" id="companyBtn">
-                리디(주) 사업자정보<span class="arrow"></span>
-                </button>
-
-                <div class="company-info-content" id="companyContent">
-                    <p>대표자 배기식<span class="divider">ㅣ</span>사업자 등록번호 120-87-27435 <span class="divider">ㅣ</span>통신판매업 신고번호 2009-서울강남-02139   </p>
-                    <p>이메일 help@ridi.com <span class="divider">ㅣ</span>대표전화 1644-0331 <span class="divder">ㅣ</span>주소 서울특별시 강남구 테헤란로 325, 어반벤치빌딩 4,10층,11층(역삼동)</p>
-                </div>  
-                <ul>
-                    <li><a href=""><p>이용약관</p></a></li>
-                    <li><a href=""><p style="font-weight: bold;">개인정보 처리방침</p></a>  </li>
-                    <li><a href=""><p>청소년보호정책</p></a></li>
-                    <li><a href=""><p>사업자확인</p></a></li>
-                </ul>
-
-                <p>RIDI Corp.</p>
-
-            </div>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
+    
+    <script src="./js/sub.js"></script>
 </body>
 
 </html>
